@@ -12,17 +12,20 @@ By using a JSR223 Pre-processor in JMeter, we're able to execute a Groovy script
 records those values into a CSV document, and makes that CSV document available for subsequent testing threads/CSV config elements to pull data from.
 This keeps testing data 'fresh' while also not requiring any additional configurations or steps to running JMeter.
 
-For convenience, a pre-configured bat file (scripts/run-jmeter-test.bat) holds the JMeter CLI run command.
 
-run-jmeter-test.bat is executed
-logs/groovyTest.jmx is initiated
-JSR223 Pre-processor is initiated and executes groovyTest.groovy
-groovyTest.groovy:
-    calls Java/Micronaut endpoint
-    Retrieves response data and writes values to logs/report.csv
-JMETER CSV Config elements pull logs/report.csv 
-JMETER Threads execute
-    HTTP Samplers using CSV data pull from logs/report.csv
+### Process Flow
+For convenience, a pre-configured bat file (scripts/run-jmeter-test.bat) holds the JMeter CLI run command. When this command runs,
+it will kick off the following processes:
+
+- run-jmeter-test.bat is executed
+- logs/groovyTest.jmx is initiated
+- JSR223 Pre-processor is initiated and executes groovyTest.groovy (from within the JMeter test)
+- groovyTest.groovy (everything is more groovy with Groovy):
+    - calls Java/Micronaut HTTP endpoint
+    - Retrieves response data and writes values to logs/report.csv
+- JMETER CSV Config elements pull logs/report.csv 
+- JMETER Threads execute
+    - HTTP Samplers using CSV data pull from logs/report.csv
 
 
 ### Quirks
