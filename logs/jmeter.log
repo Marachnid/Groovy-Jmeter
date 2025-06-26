@@ -1,0 +1,58 @@
+2025-06-25 22:22:58,826 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2025-06-25 22:22:58,845 INFO o.a.j.JMeter: Loading user properties from: C:\Users\Matth\dev\Programs\apache-jmeter-5.6.3\bin\user.properties
+2025-06-25 22:22:58,845 INFO o.a.j.JMeter: Loading system properties from: C:\Users\Matth\dev\Programs\apache-jmeter-5.6.3\bin\system.properties
+2025-06-25 22:22:58,851 INFO o.a.j.JMeter: Copyright (c) 1998-2024 The Apache Software Foundation
+2025-06-25 22:22:58,852 INFO o.a.j.JMeter: Version 5.6.3
+2025-06-25 22:22:58,852 INFO o.a.j.JMeter: java.version=21.0.4
+2025-06-25 22:22:58,852 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2025-06-25 22:22:58,852 INFO o.a.j.JMeter: os.name=Windows 11
+2025-06-25 22:22:58,853 INFO o.a.j.JMeter: os.arch=amd64
+2025-06-25 22:22:58,853 INFO o.a.j.JMeter: os.version=10.0
+2025-06-25 22:22:58,853 INFO o.a.j.JMeter: file.encoding=UTF-8
+2025-06-25 22:22:58,853 INFO o.a.j.JMeter: java.awt.headless=true
+2025-06-25 22:22:58,853 INFO o.a.j.JMeter: Max memory     =1073741824
+2025-06-25 22:22:58,853 INFO o.a.j.JMeter: Available Processors =8
+2025-06-25 22:22:58,862 INFO o.a.j.JMeter: Default Locale=English (EN)
+2025-06-25 22:22:58,862 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2025-06-25 22:22:58,862 INFO o.a.j.JMeter: JMeterHome=C:\Users\Matth\dev\Programs\apache-jmeter-5.6.3
+2025-06-25 22:22:58,863 INFO o.a.j.JMeter: user.dir  =C:\Users\Matth\dev\idea\IdeaProjects\performance-endpoints\scripts
+2025-06-25 22:22:58,863 INFO o.a.j.JMeter: PWD       =C:\Users\Matth\dev\idea\IdeaProjects\performance-endpoints\scripts
+2025-06-25 22:22:58,868 INFO o.a.j.JMeter: IP: 192.168.0.14 Name: DESKTOP-KN16T FullName: host.docker.internal
+2025-06-25 22:22:58,878 INFO o.a.j.s.FileServer: Default base='C:\Users\Matth\dev\idea\IdeaProjects\performance-endpoints\scripts'
+2025-06-25 22:22:58,880 INFO o.a.j.s.FileServer: Set new base='C:\Users\Matth\dev\idea\IdeaProjects\performance-endpoints\logs'
+2025-06-25 22:22:59,019 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2025-06-25 22:22:59,045 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2025-06-25 22:22:59,047 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2025-06-25 22:22:59,051 INFO o.a.j.s.SaveService: Loading file: C:\Users\Matth\dev\idea\IdeaProjects\performance-endpoints\logs\groovyTest.jmx
+2025-06-25 22:22:59,108 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-06-25 22:22:59,108 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-06-25 22:22:59,109 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-06-25 22:22:59,109 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-06-25 22:22:59,109 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2025-06-25 22:22:59,109 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2025-06-25 22:22:59,128 INFO o.a.j.JMeter: Creating summariser <summary>
+2025-06-25 22:22:59,139 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2025-06-25 22:22:59,140 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2025-06-25 22:22:59,141 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2025-06-25 22:22:59,145 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2025-06-25 22:22:59,146 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2025-06-25 22:22:59,372 INFO o.a.j.JMeter: Running test (1750908179372)
+2025-06-25 22:22:59,384 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
+2025-06-25 22:22:59,384 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group.
+2025-06-25 22:22:59,384 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2025-06-25 22:22:59,384 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 delayedStart=false
+2025-06-25 22:22:59,388 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2025-06-25 22:22:59,388 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2025-06-25 22:22:59,389 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
+2025-06-25 22:23:00,031 INFO o.a.j.m.J.JSR223 PreProcessor: Wrote responses to: C:\Users\Matth\dev\idea\IdeaProjects\performance-endpoints\logs\report.csv
+2025-06-25 22:23:00,044 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = DESKTOP-KN16T
+2025-06-25 22:23:00,052 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2025-06-25 22:23:00,053 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2025-06-25 22:23:00,053 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
+2025-06-25 22:23:00,053 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2025-06-25 22:23:00,053 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2025-06-25 22:23:00,139 INFO o.a.j.r.Summariser: summary +      1 in 00:00:01 =    1.3/s Avg:    29 Min:    29 Max:    29 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+2025-06-25 22:23:00,140 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-1
+2025-06-25 22:23:00,140 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-1
+2025-06-25 22:23:00,141 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2025-06-25 22:23:00,143 INFO o.a.j.r.Summariser: summary =      1 in 00:00:01 =    1.3/s Avg:    29 Min:    29 Max:    29 Err:     0 (0.00%)
