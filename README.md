@@ -1,22 +1,32 @@
-## Micronaut 4.8.3 Documentation
 
-- [User Guide](https://docs.micronaut.io/4.8.3/guide/index.html)
-- [API Reference](https://docs.micronaut.io/4.8.3/api/index.html)
-- [Configuration Reference](https://docs.micronaut.io/4.8.3/guide/configurationreference.html)
-- [Micronaut Guides](https://guides.micronaut.io/index.html)
+### Overview
 
----
+Repo is used to test combining JMeter with Groovy scripts. Groovy is built into JMeter and allows easy utilization of Groovy
+for creating pre-processing steps in Test Plans, making requests, and more.
 
-- [Micronaut Gradle Plugin documentation](https://micronaut-projects.github.io/micronaut-gradle-plugin/latest/)
-- [GraalVM Gradle Plugin documentation](https://graalvm.github.io/native-build-tools/latest/gradle-plugin.html)
-- [Shadow Gradle Plugin](https://gradleup.com/shadow/)
+The application uses a Java/Micronaut/Gradle framework for creating a simple HTTP endpoint with generic data. Groovy is then used to call that endpoint,
+create an output file from the response data, and then be embedded within the JMeter test plan.
 
-## Feature serialization-jackson documentation
+The goal of this is to carry out performance testing with real-life (or as realistic as can be) data to better represent endpoint performance.
+By using a JSR223 Pre-processor in JMeter, we're able to execute a Groovy script that calls an existing endpoint for testable values (such as IDs),
+records those values into a CSV document, and makes that CSV document available for subsequent testing threads/CSV config elements to pull data from.
+This keeps testing data 'fresh' while also not requiring any additional configurations or steps to running JMeter.
 
-- [Micronaut Serialization Jackson Core documentation](https://micronaut-projects.github.io/micronaut-serialization/latest/guide/)
+For convenience, a pre-configured bat file (scripts/run-jmeter-test.bat) holds the JMeter CLI run command.
 
-## Feature micronaut-aot documentation
+run-jmeter-test.bat is executed
+logs/groovyTest.jmx is initiated
+JSR223 Pre-processor is initiated and executes groovyTest.groovy
+groovyTest.groovy:
+    calls Java/Micronaut endpoint
+    Retrieves response data and writes values to logs/report.csv
+JMETER CSV Config elements pull logs/report.csv 
+JMETER Threads execute
+    HTTP Samplers using CSV data pull from logs/report.csv
 
-- [Micronaut AOT documentation](https://micronaut-projects.github.io/micronaut-aot/latest/guide/)
 
+### Quirks
+It's tricky trying to get report.csv to appear in the correct directory location. The file is generated from within JMeter's processes,
+and it does not seem to want to go anywhere but right next to the jmx file - this is why groovyTest.jmx is located within logs/
 
+For convenience, adding a JMETER_HOME & path variable makes running it a lot easier
