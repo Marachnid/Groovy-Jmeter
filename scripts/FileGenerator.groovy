@@ -18,7 +18,7 @@ def url = uri.toURL()
 def testValues = new JsonSlurper().parseText(url.text)        //parse json data
 
 
-def baseDir = FileServer.getFileServer().getBaseDir()
+def baseDir = new File(".").canonicalPath
 
 def singleFileName = 'singleDoc.csv'
 def singleFile = new File(baseDir, singleFileName)
